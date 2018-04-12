@@ -1,4 +1,4 @@
-
+% This is some code for an integrate and fire model of a neuron. This is NOT my code, although we used it extensively.
 
 %%%% Integrate-and-Fire Model %%%%%
 %
