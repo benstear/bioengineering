@@ -1,7 +1,7 @@
 %
 % Ben Stear
-% BMES 710
-% Lab 6: Auto-correlogram and the Cross-correlogram
+
+% This code calculates the count and timing entropy for 2 spike trains. Mutual Information is also calculated.
 % 3/6/18
 
 %% Part 1. Count Entropy of the spike train.
