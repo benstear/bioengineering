@@ -1,7 +1,7 @@
-%% Lab 9
 % Ben Stear
+%
+% This code is concerned with using symbolic notation and laplace transforms to solve differential eqns.
 
-%% Question 1
 % use eig() to find eigenvalues.  Overdamped, critically damped or
 % underdamped?
 A = [0 1; -10 -2];
