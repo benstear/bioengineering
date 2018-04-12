@@ -1,11 +1,9 @@
-%
-% Ben Stear
-% BMES 710
-% Lab 4: Peri-Stimulus Time Histogram
-% 2/21/18
-%
 
-%% Part 1 
+% Peri-Stimulus Time Histogram
+% 2/21/18
+
+
+ 
 
 %  Extract PSTHdata and put it into vectors so its easier to work with 
 ts1 = PSTHdata{1}; % zeros(1497,1); % neuron1 spike times
@@ -82,11 +80,6 @@ title('Neuron 2 & Stimulation L2'),axis('tight')
 ylabel('Spikes per Bin'), xlabel('Bins  DeltaT = 1 ms')
 xlim([-.1 .1]), ylim([0 0.5])
 
-% b) It looks like the first three cases are reacting but the 4th 
-%  (neuron 2 with stimulus 2) does not look like its responding.
-
-%% Part 2
-
 % get psth's (with distances in matrix form)
 psth11 = histc(d11,Xmin:bin:Xmax)/length(ref1);  
 psth12 = histc(d12,Xmin:bin:Xmax)/length(ref1);
@@ -99,8 +92,8 @@ bincounts1 = [];
     for i = 1:201  % from -100ms to -5ms
         bincounts1(i) = sum(psth11(i,:));
     end
-   background1 =  (sum(bincounts1(1:95)))/95; % divide by num of bins we're summing
-   THRESHOLD1 = background1 + 3*std(bincounts1); % calculate threshold
+   background1 =  (sum(bincounts1(1:95)))/95; % divide by num of bins we're summing to find average (background noise)
+   THRESHOLD1 = background1 + 3*std(bincounts1); % calculate threshold (Background plus 3 std's)
    
    bincounts2 = []; % for neuron 1 with stim2
     for i = 1:201  
@@ -145,25 +138,8 @@ PR = [0.4828;0.1293;0.1379;0.0776];
 FBL = [0.013;0.013;0.011;-0.032];
 LBL = [0.015;0.017;0.017;0.018];
 PL = [0.011;0.014;0.012;0.018];
-
-% a)
 T = table(Neurons,RM,PR,FBL,LBL,PL)
 
-% b) I think these values all make sense, there was no significant
-%response for neuron2/stim2 and that is reflected in the table. 
-% Also, for neuron2/stim2 the first significant bin looks like it
-% occurs before t = 0 which is also reflected in the table.
-
-% c) I think I would use FBL, LBL and PL. I would determine if the peak
-% latency fell between the FBL and LBL then it is likely the neuron
-% responded.
-
-% d) If we raise the value of k then our threshold will be higher and it
-% will take a higher peak to be classified as a spike. It could reduce our
-% response magnitube.
-
-% e) I think that a value of k greater than zero will give you better
-% results by filtering the background activity out better.
        
 
 
