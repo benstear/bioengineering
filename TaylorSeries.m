@@ -1,8 +1,8 @@
 % 
 % Ben Stear
-% BMES 506: Mathematics for Biology II
-% MATLAB Assignment I
-% Dr. Throckmorton
+% A few problems dealing with Taylor Series
+%
+%
 clear; close all;
 
 
