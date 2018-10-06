@@ -1,4 +1,4 @@
-% This is some code for an integrate and fire model of a neuron. This is NOT my code, although we used it extensively.
+
 
 %%%% Integrate-and-Fire Model %%%%%
 %
@@ -75,4 +75,5 @@ ylabel('Voltage in mV');
 % Every time threshold is reached, it immediately resets the voltage to V_reset (which is our signal
 % that a spike occurred at this time, if we were trying to count the number of spikes).
 
+%% PART II: Spiking Dynamics
 
