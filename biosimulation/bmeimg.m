@@ -1,3 +1,5 @@
+% This file defines a matlab class 'bmeimg' which performs various image analysis tasks.
+
 classdef bmeimg < handle
     
     properties 
