@@ -1,6 +1,5 @@
 
-% Callan Powell & Ben Stear 
-% BMES 672 Hw #2
+% Ben Stear 
 
 %% PART 1) Reproduce non-linear logistic equation from lecture slide #14
 
@@ -18,7 +17,7 @@ end
 title('Discrete Logistic Equation'); xlabel('r'); ylabel('x');
 
 
-%% Part 2) 4d.
+%% Part 2) Carrying capacity equation
 r = 1.0;
 k = 5;
 N = zeros(1,10);
